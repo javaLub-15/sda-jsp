@@ -5,5 +5,8 @@
 </head>
 <body>
 <h2>Redirected page</h2>
+<p>Dzisiaj jest
+    <jsp:include page="included.jsp"/>
+</p>
 </body>
 </html>
