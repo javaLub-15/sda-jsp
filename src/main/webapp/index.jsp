@@ -12,6 +12,9 @@
         out.print(now);
     %>
 </h1>
+<%--To jest mój komentarz--%>
+<!--To jest mój komentarz-->
+
 
 Licznik odwiedzin: <%=counter%>
 <%
