@@ -4,7 +4,9 @@
     <title>Parametry wyszukania</title>
 </head>
 <body>
-<form action="redirected.jsp" method="get">
+<a href="redirected.jsp?query=Java&page=3&sort=asc">link</a>
+
+<form action="redirected.jsp" method="post">
     <label>Szukane słowe: <input type="text" name="query"/></label>
     <label>Nr strony: <input type="text" name="page"></label>
     <label>Sortowanie:
