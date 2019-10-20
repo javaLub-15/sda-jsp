@@ -1,14 +1,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<jsp:useBean id="calculator" class="pl.sda.Calculator"/>
 <html>
 <head>
     <title>Redirected</title>
 </head>
 <body>
-<h2>Redirected page</h2>
-<p>Dzisiaj jest
-    <jsp:include page="included.jsp"/>
-</p>
-<p>Mój parametr to: <%= request.getParameter("myParam")%>
+<p>5<sup>2</sup> wynosi:
+    <%
+        int square = calculator.square(5);
+        out.print(square);
+    %>
 </p>
 </body>
 </html>
