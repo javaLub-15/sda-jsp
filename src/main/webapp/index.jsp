@@ -9,5 +9,7 @@
 <p>Port nr: ${pageContext.request.serverPort}</p>
 <p>Request URI: ${pageContext.request.requestURI}</p>
 <p></p>
+
+<jsp:forward page="redirected.jsp"/>
 </body>
 </html>
