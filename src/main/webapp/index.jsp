@@ -1,17 +1,18 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title>Dzisiaj jest....</title>
+    <title>Parametry wyszukania</title>
 </head>
 <body>
-<p>Server name: ${pageContext.request.serverName}</p>
-<p>Context path${pageContext.request.contextPath}</p>
-<p>Port nr: ${pageContext.request.serverPort}</p>
-<p>Request URI: ${pageContext.request.requestURI}</p>
-<p></p>
-
-<jsp:forward page="redirected.jsp">
-    <jsp:param name="myParam" value="mój parametr"/>
-</jsp:forward>
+<form action="redirected.jsp" method="get">
+    <label>Szukane słowe: <input type="text" name="query"/></label>
+    <label>Nr strony: <input type="text" name="page"></label>
+    <label>Sortowanie:
+        <select name="sort">
+            <option value="asc">Rosnąco</option>
+            <option value="desc">Malejąco</option>
+        </select></label>
+    <input type="submit" value="Wyślij"/>
+</form>
 </body>
 </html>

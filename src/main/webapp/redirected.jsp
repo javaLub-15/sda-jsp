@@ -3,16 +3,14 @@
 <jsp:setProperty name="calculator" property="n" value="5"/>
 <html>
 <head>
-    <title>Redirected</title>
+    <title>Wyniki wyszukania</title>
 </head>
 <body>
-<p>
-    <jsp:getProperty name="calculator" property="n"/>
-    <sup>2</sup> wynosi:
-    <%
-        int square = calculator.square();
-        out.print(square);
-    %>
-</p>
+<p> Szukane słowo: <b><%= request.getParameter("query")%>
+</b></p>
+<p>Strona: <b><%= request.getParameter("page")%>
+</b></p>
+<p>Sortowanie: <b><%= "desc".equals(request.getParameter("sort")) ? "malejąco" : "rosnąco" %>
+</b></p>
 </body>
 </html>
