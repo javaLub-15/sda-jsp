@@ -4,17 +4,14 @@
     <title>Parametry wyszukania</title>
 </head>
 <body>
-<a href="redirected.jsp?query=Java&page=3&sort=asc">link</a>
+<a href="search.jsp">serarch</a>
+<%
+    Cookie searchIdCookie =
+            new Cookie("searchId", "123456");
+    int oneDay = 60 * 60 * 24;
+    searchIdCookie.setMaxAge(oneDay);
+    response.addCookie(searchIdCookie);
+%>
 
-<form action="redirected.jsp" method="post">
-    <label>Szukane słowe: <input type="text" name="query"/></label>
-    <label>Nr strony: <input type="text" name="page"></label>
-    <label>Sortowanie:
-        <select name="sort">
-            <option value="asc">Rosnąco</option>
-            <option value="desc">Malejąco</option>
-        </select></label>
-    <input type="submit" value="Wyślij"/>
-</form>
 </body>
 </html>
