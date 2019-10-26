@@ -1,16 +1,14 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title>Parametry wyszukania</title>
+    <title>Tworzenie nowej sesji</title>
 </head>
 <body>
-<a href="search.jsp">serarch</a>
+<a href="session.jsp">serarch</a>
 <%
-    Cookie searchIdCookie =
-            new Cookie("searchId", "123456");
-    int oneDay = 60 * 60 * 24;
-    searchIdCookie.setMaxAge(oneDay);
-    response.addCookie(searchIdCookie);
+    request.getSession().invalidate();
+    HttpSession actualSession = request.getSession();
+    actualSession.setAttribute("userId", "123456");
 %>
 
 </body>
